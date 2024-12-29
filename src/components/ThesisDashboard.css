@@ -1,0 +1,111 @@
+.btn-src {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px; /* Köşeleri yuvarlat */
+    transition: background-color 0.3s ease; /* Geçiş animasyonu */
+}
+.btn-back{
+    padding: 20px 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px; /* Köşeleri yuvarlat */
+    transition: background-color 0.3s ease; /* Geçiş animasyonu */
+}
+.btn-back:hover{
+    background-color: #0056b3; /* Hover rengi */
+}
+.btn-back:active{
+    background-color: #003d80; /* Tıklama rengi */
+}
+
+.btn-src:hover {
+    background-color: #0056b3; /* Hover rengi */
+}
+
+.btn-src:active {
+    background-color: #003d80; /* Tıklama rengi */
+}
+.input {
+    padding: 10px;
+    width: 70%;
+    font-size: 16px;
+    border: 1px solid #ccc; /* Hafif gri border */
+    border-radius: 5px; /* Köşeleri yuvarlat */
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input:focus {
+    border-color: #007bff; /* Odaklandığında mavi border */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Hafif mavi gölge */
+}
+
+.app-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.App {
+    padding: 20px;
+    max-width: 900px; /* Genişlik sınırı */
+    margin: 0 auto; /* Ortala */
+    background-color: #fff; /* Beyaz arka plan */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    border-radius: 8px; /* Köşeleri yuvarlat */
+}
+.list-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    background-color: #fff; /* Arka planı beyaz yap */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+}
+
+.tbl-head tr th {
+    
+    border: 1px solid #ddd;
+    padding: 12px;
+    background-color: #007bff; /* Başlık rengi */
+    color: white;
+    text-align: left;
+}
+
+.tbl-listed tr:nth-child(even) {
+
+    background-color: #f9f9f9; /* Zebra çizgi rengi */
+}
+
+.tbl-listed tr:hover {
+    background-color: #e6f7ff; /* Hover efekti */
+}
+
+.tbl-listed td {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+.list-table td a {
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+}
+
+.list-table td a:hover {
+    text-decoration: underline; /* Hover durumunda alt çizgi */
+}
+.non-listed {
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    color: #555; /* Daha hafif bir gri renk */
+    background-color: #f8d7da; /* Hafif kırmızımsı arka plan */
+    border: 1px solid #f5c6cb; /* Uyumlu bir kenar rengi */
+    border-radius: 5px; /* Köşeleri yuvarlat */
+}

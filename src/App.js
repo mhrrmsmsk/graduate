@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { ThesisProvider } from "./contexts/ThesisContext";
+import ThesisAdd from "./components/ThesisAdd";
+import AuthorUpdateDelete from "./components/AuthorUpdateDelete";
+import ThesisDashboard from "./components/ThesisDashboard";
+import ThesisDetails from "./components/ThesisDetails";
+import ThesisUpdateDelete from "./components/ThesisUpdateDelete";
+import UniversityUpdateDelete from "./components/UniversityUpdateDelete";
+import InstituteUpdateDelete from "./components/InstituteUpdateDelete";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import SupervisorUpdateDelete from "./components/SupervisorUpdateDelete";
+import SubjectTopicUpdateDelete from "./components/SubjectTopicUpdateDelete";
+import KeywordUpdateDelete from "./components/KeywordUpdateDelete";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThesisProvider>
+      <Router>
+        <Routes>
+          {/* Ana Sayfa: Direkt Dashboard açılacak */}
+          <Route path="/" element={<ThesisDashboard />} />
+
+          {/* Diğer rotalar */}
+          <Route path="/dashboard" element={<ThesisDashboard />} />
+          <Route path="/add" element={<ThesisUpdateDelete />} />
+          <Route path="/thesis/:id" element={<ThesisDetails />} />
+          <Route path="/author" element={<AuthorUpdateDelete />} />
+          <Route path="/university" element={<UniversityUpdateDelete />} />
+          <Route path="/institute" element={<InstituteUpdateDelete />} />
+          <Route path="/supervisor" element={<SupervisorUpdateDelete />} />
+          <Route path="/subtop" element={<SubjectTopicUpdateDelete />} />
+          <Route path="/keyword" element={<KeywordUpdateDelete />} />
+        </Routes>
+      </Router>
+    </ThesisProvider>
   );
 }
 
